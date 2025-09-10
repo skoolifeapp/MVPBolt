@@ -2,11 +2,10 @@ const { getDefaultConfig } = require('expo/metro-config');
 
 const config = getDefaultConfig(__dirname);
 
-// ✅ Privilégier les builds JS (main/module) avant "react-native" qui peut pointer sur src/*.ts
+// ✅ Privilégie les builds JS des paquets, et redirige toute importation vers le dossier build/
 config.resolver = {
   ...config.resolver,
   resolverMainFields: ['main', 'module', 'react-native'],
-  // Optionnel mais utile si un paquet expose des "src" explicitement
   alias: {
     ...(config.resolver?.alias ?? {}),
     'expo-modules-core/src': 'expo-modules-core/build',
