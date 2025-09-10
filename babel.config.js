@@ -2,7 +2,7 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
-    // Ajout prudent pour garantir le parse de TS partout si nécessaire
+    // Optionnel : sécurise le parse TS si un paquet laisse passer du .ts
     plugins: [['@babel/plugin-transform-typescript', { isTSX: true }]],
   };
 };
