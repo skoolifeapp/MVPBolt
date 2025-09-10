@@ -25,7 +25,9 @@
     "react-native": "0.76.5",
     "react-native-svg": "15.8.0"
   },
-  "overrides": {},
+  "overrides": {
+    "expo-modules-core": "2.5.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/plugin-transform-typescript": "^7.28.0",
